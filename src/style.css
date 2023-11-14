@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*:focus-visible {
+	@apply focus:outline-0 focus-visible:outline-0 focus:border-0 focus:ring-0 animate-pulse !important;
+}
+
+::-webkit-scrollbar {
+	@apply w-[0.01px] h-[0.01px];
+}
+
+body,
+#app {
+	@apply m-0 p-0 w-screen h-[100dvh] bg-white overflow-hidden scroll-smooth;
+	
+	text-rendering: optimizelegibility;
+}
+
+.inset {
+  box-shadow: inset -0.9em -0.9em 0.9em 0 rgba(255, 255, 255, 0.05), inset 0.9em 0.9em 0.9em 0 rgba(0, 0, 0, 0.3);
+}
+
+.inset-small {
+  box-shadow: inset -0.2em -0.2em 0.2em 0 rgba(255, 255, 255, 0.3), inset 0.2em 0.2em 0.2em 0 rgba(0, 0, 0, 0.2);
+}
+
+.outset {
+  box-shadow: inset 0.8em 0.8em 0.8em 0 rgba(255, 255, 255, 0.5), inset -0.8em -0.8em 0.8em 0 rgba(0, 0, 0, 0.2);
+}
+
+svg#star-one {
+  position: absolute;
+  -webkit-transform: translate(130%, 80%);
+  transform: translate(130%, 80%);
+}
+
+svg#star-two {
+  position: absolute;
+  -webkit-transform: translate(250%, 50%);
+  transform: translate(250%, 50%);
+}
+
+svg#star-three {
+  position: absolute;
+  -webkit-transform: translate(340%, 50%);
+  transform: translate(340%, 50%);
+}
+
+.star-group {
+  -webkit-transform: translate(42.5px, 42.5px);
+  -moz-transform: translate(42.5px, 42.5px);
+  transform: translate(42.5px, 42.5px);
+}
+
+path {
+  -webkit-transform: translate(-42.50px, -42.50px);
+  -moz-transform: translate(-42.50px, -42.50px);
+  transform: translate(-42.50px, -42.50px);
+}
+
+.star-part-one {
+  animation: star-one 2.5s infinite;
+  -webkit-animation: star-one 2.5s infinite;
+  -moz-animation: star-one 2.5s infinite;
+}
+
+.star-part-two {
+  animation: star-one 5s infinite;
+  -webkit-animation: star-one 5s infinite;
+  -moz-animation: star-one 5s infinite;
+}
+
+.star-part-three {
+  animation: star-two 3.5s infinite;
+  -webkit-animation: star-two 3.5s infinite;
+  -moz-animation: star-two 3.5s infinite;
+}
+
+@keyframes star-one {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) scale(0);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(405deg) scale(1.1);
+  }
+}
+
+@keyframes star-two {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg) scale(0);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
