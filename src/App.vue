@@ -62,8 +62,8 @@ const toggle = () => {
     </div>
     <div class="mx-auto mt-5">
       <a href="https://github.com/drazzardaq/equinox.git" target="_blank">
-        <img :class="sun ? 'flex' : 'hidden'" src="GitHub_Logo.png" alt="GitHub Logo" class="w-24">
-        <img :class="!sun ? 'flex' : 'hidden'" src="GitHub_Logo_White.png" alt="GitHub Logo" class="w-24">
+        <img :class="sun ? 'flex' : 'hidden'" src="./GitHub_Logo.png" alt="GitHub Logo" class="w-24">
+        <img :class="!sun ? 'flex' : 'hidden'" src="./GitHub_Logo_White.png" alt="GitHub Logo" class="w-24">
       </a>
     </div>
   </div>
